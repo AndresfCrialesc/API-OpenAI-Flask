@@ -110,6 +110,9 @@ response = client.chat.completions.create(
 # La forma como logre llegar al Contec Fue de la siguiente manera y la repuesta generada por el modelo la guarde en mi variable que declara vacia llamada respuestaGPT
 respuestaGPT = response.choices[0].message.content
 
+# para evitar que pierda el contexto o siga en una misma conversación utilizamos el rol del asistente, este es el encargado de guardar todo lo que se esta hablando.
+conversation.append({"role": "assistant", "content": respuestaGPT})
+
 # Aqui solo proceso a inprimir la respuesta con un print() o si etoy desde una funcion pues retorno la repuesta
 print(respuestaGPT)
 
@@ -142,6 +145,7 @@ response = client.chat.completions.create(
         )
 
 respuestaGPT = response.choices[0].message.content
+conversation.append({"role": "assistant", "content": respuestaGPT})
 
 print(respuestaGPT)
 #..........................................................................................................................................................................................
@@ -173,6 +177,7 @@ def modeloExmple(preguntaUsuario):
             )
 
     respuestaGPT = response.choices[0].message.content
+    conversation.append({"role": "assistant", "content": respuestaGPT})
 
     return respuestaGPT
 
