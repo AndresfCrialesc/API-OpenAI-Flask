@@ -20,7 +20,7 @@ api_key = ConfigFidare.openiaToken
 client = OpenAI(api_key=api_key)
 
 #forma numero 2: Simplemnete ponemos la llave.
-api_key = "key_exampol"
+api_key = "key_example"
 client = OpenAI(api_key=api_key)
 
 # Autor: Andres Felipe Criales Cortes
