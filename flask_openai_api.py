@@ -24,7 +24,7 @@ def conversacion():
 
     # variable recibida desde frond-end o desde postman
     # {
-    #     "preguntaEntrante": "¿Conoces la ley 100?" -> Pregunta de ejemplo al modelo
+    #     "preguntaEntrante": "¿Conoces la ley 100?" -> Pregunta de ejemplo entrada
     # }    
     preguntaEntrante = param.get('preguntaEntrante')
 
